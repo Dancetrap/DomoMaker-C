@@ -39,7 +39,6 @@ const init = () => {
   const loginForm = document.getElementById('loginForm');
   const domoForm = document.getElementById('domoForm');
   const domoMessage = document.getElementById('domoMessage');
-
   /* If this page has the signupForm, add it's submit event listener.
      Event listener will grab the username, password, and password2
      from the form, validate everything is correct, and then will
@@ -82,7 +81,7 @@ const init = () => {
 
       const username = loginForm.querySelector('#user').value;
       const pass = loginForm.querySelector('#pass').value;
-      const _csrf = signupForm.querySelector('#_csrf').value;
+      const _csrf = loginForm.querySelector('#_csrf').value;
 
       if(!username || !pass) {
         handleError('Username or password is empty!');
@@ -106,7 +105,7 @@ const init = () => {
 
       const name = domoForm.querySelector('#domoName').value;
       const age = domoForm.querySelector('#domoAge').value;
-      const _csrf = signupForm.querySelector('#_csrf').value;
+      const _csrf = domoForm.querySelector('#_csrf').value;
 
       if(!name || !age) {
         handleError('All fields are required!');
